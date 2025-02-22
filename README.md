@@ -1,4 +1,4 @@
-# FHIR Department
+# FHIR 🔥 Department
 
 The FHIR Department is a comprehensive system for processing and converting
 unstructured medical information into standardized FHIR (Fast Healthcare
@@ -7,7 +7,7 @@ with multiple specialized components working together to ensure accurate and
 reliable data transformation.
 
 ## 🏗️ Architecture Overview
-
+![🏗️ Architecture Overview](theplan.png "The Plan")
 The system consists of five main components, each handling specific aspects of
 the FHIR conversion process:
 
