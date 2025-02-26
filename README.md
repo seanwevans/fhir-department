@@ -1,4 +1,7 @@
+![License](https://img.shields.io/github/license/seanwevans/fhir-department)
 ![CI](https://github.com/seanwevans/fhir-department/actions/workflows/c-cpp.yml/badge.svg)
+![Issues](https://img.shields.io/github/issues/seanwevans/fhir-department)
+![Pull Requests](https://img.shields.io/github/issues-pr/seanwevans/fhir-department)
 
 # FHIR 🔥 Department
 
