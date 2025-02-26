@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y clang-format make gcc
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r requirements.txt
+
+      - name: Run clang-format
+        run: |
+          find . -name "*.c" -o -name "*.h" | xargs clang-format -i
+          git diff --exit-code || (echo "Run clang-format locally before committing" && exit 1)
+
+      - name: Run Black (Python formatter)
+        run: |
+          black .
+          git diff --exit-code || (echo "Run Black locally before committing" && exit 1)
+
+      - name: Run pylint
+        run: |
+          pylint $(git ls-files '*.py')
+
+      - name: Build C code
+        run: make
