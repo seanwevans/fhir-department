@@ -1,3 +1,5 @@
+![CI](https://github.com/seanwevans/fhir-department/actions/workflows/c-cpp.yml/badge.svg)
+
 # FHIR 🔥 Department
 
 The FHIR Department is a comprehensive system for processing and converting
