@@ -3,8 +3,11 @@
 """ classify.py - step 1.1 of the fhir hose """
 
 
+import hashlib
 import json
 import subprocess
+import time
+import uuid
 
 import redis
 
@@ -51,6 +54,18 @@ def get_mime_type(file_path):
         return {"error": "Failed to determine MIME type", "details": str(exc)}
 
 
+def calculate_md5(file_path):
+    """Calculates the MD5 hash of the file contents."""
+    try:
+        hasher = hashlib.md5()
+        with open(file_path, "rb") as fin:
+            for chunk in iter(lambda: fin.read(4096), b""):
+                hasher.update(chunk)
+        return hasher.hexdigest()
+    except Exception as exc:
+        return {"error": "Failed to compute MD5 hash", "details": str(exc)}
+
+
 def main():
     """script entry-point"""
 
@@ -59,8 +74,20 @@ def main():
         print(json.dumps({"error": "No file found in queue"}))
         return
 
+    transaction_id = str(uuid.uuid4())
+    transaction_time = time.time()
+    file_hash = calculate_md5(file_path)
     mime_info = get_mime_type(file_path)
-    print(json.dumps(mime_info))
+
+    result = {
+        "transaction_id": transaction_id,
+        "transaction_time": transaction_time,
+        "file_path": file_path,
+        "file_hash": file_hash,
+        "mime_info": mime_info,
+    }
+
+    print(json.dumps(result))
 
 
 if __name__ == "__main__":
