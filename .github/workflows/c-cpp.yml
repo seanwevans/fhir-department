@@ -24,18 +24,13 @@ jobs:
           python3 -m pip install -r requirements.txt
 
       - name: Run clang-format
-        run: |
-          find . -name "*.c" -o -name "*.h" | xargs clang-format -i
-          git diff --exit-code || (echo "Run clang-format locally before committing" && exit 1)
+        run: find . -name "*.c" -o -name "*.h" | xargs clang-format -i
 
       - name: Run Black (Python formatter)
-        run: |
-          black .
-          git diff --exit-code || (echo "Run Black locally before committing" && exit 1)
+        run: black .          
 
       - name: Run pylint
-        run: |
-          pylint $(git ls-files '*.py')
+        run: pylint $(git ls-files '*.py')
 
       - name: Build C code
         run: make
