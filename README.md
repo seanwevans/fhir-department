@@ -104,20 +104,21 @@ Performance is tracked through:
 
 ## 🚀 Getting Started
 
-[setup and installation instructions]
+1. `make`
+2. `pip install -r requirements.txt`
 
 ## 📚 Documentation
 
-[links to documentation]
+[This will be useful soon](https://FHIR.house)
 
 ## 🤝 Contributing
 
-[contribution guidelines and requirements]
+- Don't be a jerk
+- Submit a pull request
 
 ## 📄 License
 
-[license]
+[MIT](https://github.com/seanwevans/fhir-department/blob/main/LICENSE)
 
 ## 🔗 Related Projects
-
-[links to related projects]
+[FHIR v5](https://www.hl7.org/fhir/overview.html)
