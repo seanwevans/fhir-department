@@ -12,8 +12,8 @@ with multiple specialized components working together to ensure accurate and
 reliable data transformation.
 
 ## 🏗️ Architecture Overview
-![🏗️ Architecture Overview](theplan.png "The Plan")
-The system consists of five main components, each handling specific aspects of
+![🏗️ Architecture Overview](docs/FHIR-dept.png "The Plan")
+The system consists of six main components, each handling specific aspects of
 the FHIR conversion process:
 
 ### 🚰 FHIR Hydrant (Thin Passthrough Layer)
@@ -108,7 +108,6 @@ Performance is tracked through:
 ## 🚀 Getting Started
 
 1. `make`
-2. `pip install -r requirements.txt`
 
 ## 📚 Documentation
 
