@@ -1,0 +1,15 @@
+{
+  "resourceType": "Patient",
+  "id": "{{ patient_id }}",
+  "name": [
+    {
+      "family": "{{ family_name }}",
+      "given": ["{{ given_name }}"]
+    }
+  ],
+  "birthDate": "{{ birth_date }}"
+  {% if additional_fields %}
+    ,
+    "extension": {{ additional_fields }}
+  {% endif %}
+}
