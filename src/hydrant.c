@@ -1,4 +1,4 @@
-// src/main.c
+// src/hydrant.c
 // Usage: hydrant  [config_file]  [input_file]
 
 #include <stdio.h>
