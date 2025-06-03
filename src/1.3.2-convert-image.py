@@ -38,11 +38,11 @@ def main():
     )
     args = parser.parse_args()
 
-    if not os.path.exists(args.image_file):
-        print(f"Error: image file '{args.image_file}' not found.")
+    if not os.path.exists(args.img_file):
+        print(f"Error: image file '{args.img_file}' not found.")
         sys.exit(1)
 
-    run_tesseract(temp_tiff, args.output, lang=args.lang)
+    run_tesseract(args.img_file, args.output, lang=args.lang)
 
 
 if __name__ == "__main__":
