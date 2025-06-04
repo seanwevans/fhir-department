@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-""" step 1.2.3-clean-pdf.py """
+"""step 1.2.3-clean-pdf.py"""
 
 import fitz
 import json
@@ -23,8 +23,8 @@ def optimize_pdf(input_pdf_path, output_pdf_path):
 
     doc = fitz.open(input_pdf_path)
     existing_metadata = doc.metadata
-    with open("metadata.json", "w", encoding("UTF-8")) as mdout:
-        json.dump(existing_metadata, meta_file, indent=4)
+    with open("metadata.json", "w", encoding="UTF-8") as mdout:
+        json.dump(existing_metadata, mdout, indent=4)
 
     new_doc = fitz.open()
 
