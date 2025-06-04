@@ -2,8 +2,6 @@
 
 """ src/3.2-ml-model.py"""
 
-
-
 class MLMapper:
     def __init__(self, model_path: str):
         """
