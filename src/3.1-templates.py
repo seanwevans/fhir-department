@@ -3,7 +3,6 @@
 """ src/3.1-templates.py """
 
 
-import os
 import json
 import jinja2
 

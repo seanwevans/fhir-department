@@ -2,10 +2,6 @@
 
 """ src/3.2-ml-model.py"""
 
-import argparse
-import json
-import os
-import sys
 
 
 class MLMapper:

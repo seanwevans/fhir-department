@@ -2,9 +2,6 @@
 
 """src/3.3-relational-model.py"""
 
-import argparse
-import os
-import sys
 
 from sqlalchemy import create_engine, Column, String, Integer
 from sqlalchemy.ext.declarative import declarative_base

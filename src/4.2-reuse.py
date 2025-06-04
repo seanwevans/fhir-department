@@ -2,9 +2,6 @@
 
 """ src/4.2-reuse.py"""
 
-import argparse
-import os
-import sys
 
 import requests
 
