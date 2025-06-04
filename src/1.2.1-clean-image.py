@@ -213,7 +213,7 @@ def process_image(input_path, output_path, args):
 
 
 def main(args):
-    params = argp.parse_args(args)
+    params = parse_args(args)
     process_image(params.input, params.output, params)
 
 
