@@ -11,7 +11,6 @@ import pickle
 import os
 import re
 import sys
-from time import process_time
 import unicodedata
 
 from lxml import etree as ET

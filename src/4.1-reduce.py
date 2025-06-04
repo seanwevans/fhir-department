@@ -2,10 +2,7 @@
 
 """ src/4.1-reduce.py"""
 
-import argparse
 import copy
-import os
-import sys
 
 
 def deduplicate_fhir_resources(resources: list[dict]) -> list[dict]:

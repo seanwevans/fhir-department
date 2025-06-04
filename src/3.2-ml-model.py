@@ -2,13 +2,6 @@
 
 """ src/3.2-ml-model.py"""
 
-import argparse
-import json
-import os
-import sys
-import joblib
-
-
 class MLMapper:
     def __init__(self, model_path: str):
         """
